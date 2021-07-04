@@ -10,18 +10,23 @@ const countCategories = () => {
 console.log(countCategories());
 
 const headerCategoriesRef = document.querySelectorAll('h2');
-console.log(headerCategoriesRef);
+//console.log(headerCategoriesRef);
 
-const getNameOfCategories = headerCategoriesRef => {
-    return headerCategoriesRef.forEach((element) => {
-        console.log(element)
-        const liOfCategorieRef = element.nextSibling;
-        console.log(liOfCategorieRef);
+const getNameOfCategoriesAndAmountElements = headerCategoriesRef => {
+    return headerCategoriesRef.forEach((element, index1) => {
+        console.log('Категория:', element.textContent);
+        const liEl = document.querySelectorAll('.listCategory');
+        liEl.forEach((ul, index2) => {
+            if (index1 === index2) {
+                console.log('Количество элементов:', ul.children.length);
+            }
+        });
+
     })
 
 }
 
-console.log(getNameOfCategories(headerCategoriesRef));
+console.log(getNameOfCategoriesAndAmountElements(headerCategoriesRef));
 
 
 
