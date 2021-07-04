@@ -14,11 +14,11 @@ console.log(headerCategoriesRef);
 
 const getNameOfCategories = headerCategoriesRef => {
     return headerCategoriesRef.forEach((element) => {
-  console.log(element)
+        console.log(element)
         const liOfCategorieRef = element.nextSibling;
         console.log(liOfCategorieRef);
-})
-    
+    })
+
 }
 
 console.log(getNameOfCategories(headerCategoriesRef));
