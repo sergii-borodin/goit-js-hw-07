@@ -1,4 +1,4 @@
-const ulRef = document.querySelector('ul');
+const ulRef = document.querySelector('#categories');
 console.log(ulRef);
 
 const liRef = document.querySelectorAll('.item');
@@ -25,6 +25,8 @@ const getNameOfCategoriesAndAmountElements = headerCategoriesRef => {
     })
 
 }
+
+
 
 console.log(getNameOfCategoriesAndAmountElements(headerCategoriesRef));
 
